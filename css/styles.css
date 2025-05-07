@@ -1,0 +1,238 @@
+:root{
+  --rojo: rgb(175, 40, 30); 
+    --claro:rgb(236, 204, 116);
+--atardecer:#FE8822;
+--vino:#974541;
+--atardOscuro:#6B4245;
+--otroatardecer:#F28539;
+--clarorosa:rgb(240, 230, 230);;
+--fondo:rgba(255,255,255,0.605);
+}
+
+ 
+.parallax{
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  /* para centrar el contenido
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+}
+.content{
+  background-color:var(--fondo);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.scroll{
+  height: 100vh;
+  background-color: var(--fondo);
+  padding: 20px;
+  box-sizing: border-box;/*para que el pading entre dentro del div*/
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--fondo);
+}
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 7.5rem;
+ text-align: right;
+  font-family: "Monoton", sans-serif;
+  color:var(--clarorosa);
+  padding-right: 7rem;
+  padding-top: 4rem;
+  /* transform: translateY(50px); */
+      /* animation: aparecer 4s ease-out forwards infinite; */
+      position: relative;
+      animation: saltitos 5s ease-out forwards;
+      
+    }
+
+
+#im{
+  opacity: 0.6;
+  background-image:linear gradient (to top, black, 0%, white);
+  width:20% ;
+  border-radius: 30px;
+  box-shadow: 11px -11px 15px -5px rgba(0,0,0,0.74);;
+  border-right:1px solid rgb(22, 21, 22);
+  border-bottom:1px solid rgb(14, 13, 13) ; 
+}
+
+@keyframes rotar {
+    50%{transform: rotate(180deg)
+    }}
+  img:hover{
+    animation: rotar 4s;
+  }
+
+.banner parallax{
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-image: url('../img/jjj.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0; 
+    animation: moverPaisaje 10s ;
+    
+  }
+  /* Animación para mover el paisaje */
+  @keyframes moverPaisaje {
+    from {
+      background-position:(0, 0) ;
+    }
+    to {
+      background-position: (-100%, 0);
+    }
+  }
+  .menu{
+    opacity: 0.8;
+    border-bottom: var(--atardOscuro) 3px dotted;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* color: var(--white); */
+    padding: 1rem;
+}
+.menu a {
+    font-size: 2rem;
+    color: var(--rojo);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+    
+.menu a:hover{
+    color:var(--secundary);
+}
+.frase{
+      color: var(--atardOscuro);
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 2rem;
+        width: 50%;
+        margin-left: 50%;
+        line-height: 1.5;
+        /* padding-bottom: 40%; */
+    }
+.frase:hover{
+        animation-name: example;
+        animation-duration: 4s;
+      }
+      
+@keyframes example {
+            0%   {color: black;}
+            25%  {color: yellow;}
+            50%  {color: rgb(255, 30, 0);}
+            100% {color: rgb(3, 104, 3);}
+
+        }
+.todo{
+          display: flex;
+          align-items: center;
+        }
+
+.piepagina{
+          color: var(--white);
+          background-color:var(--rojo);
+         text-align: center;
+          align-items: center;
+          padding-top: 2rem;
+          border-top: var(--atardecer) 2px dotted;
+      }
+      
+.iconos{
+          color: var(--white);
+          
+          background-color: var(--rojo);
+          text-align: center;
+          align-items: center;
+          
+      }
+      
+.piepagina, .iconos{
+          
+          color: var(--atardecer);
+        
+      }
+      
+.iconos i{
+      color: var(--atardecer);
+      font-size: 2rem;
+      margin: 5px 10px;
+     
+  
+      }
+.iconos i:hover{
+          color: var(--claro);
+      }
+  h2{
+    text-align: center;
+    padding: 2rem;
+    color:var(--rojo);
+    font-size: 3rem;
+    
+  }
+  h2:hover{
+    animation: appear 1s forwards;
+  }
+  .info p{
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  /* @keyframes aparecer {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+  @keyframes saltitos {
+    0% {
+      transform: translateX(-300px) translateY(0);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(-200px) translateY(-30px);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-100px) translateY(0);
+    }
+    70% {
+      transform: translateX(-50px) translateY(-15px);
+    }
+    85% {
+      transform: translateX(-20px) translateY(0);
+    }
+    95% {
+      transform: translateX(-10px) translateY(-5px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
